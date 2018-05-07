@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <io.github.kexanie.library.MathView
+            android:id="@+id/formula_pretty_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:engine="MathJax">
+
+        </io.github.kexanie.library.MathView>
+
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/num1_id"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:inputType="numberDecimal"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/operator_label_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/num2_id"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:inputType="numberDecimal"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/sum_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="+"/>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/div_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="/"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

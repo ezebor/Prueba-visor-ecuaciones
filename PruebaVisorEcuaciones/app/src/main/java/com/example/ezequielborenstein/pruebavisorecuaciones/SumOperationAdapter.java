@@ -31,6 +31,7 @@ public class SumOperationAdapter extends OperationAdapter {
         EditText editTextToEdit;
         if(operations.size() == 1){
             editTextToEdit = num1;
+            num2.setBackgroundColor(Color.GRAY);
         }else{
             editTextToEdit = num2;
             this.operand1 = null;

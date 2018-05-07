@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     public void enterNextValueOrFinishOperation(View num){
         // Enter num 2
         if(num.getId() != num2.getId()){
-            num1.setBackgroundColor(Color.TRANSPARENT);
+            num1.setBackgroundColor(Color.GRAY);
             num2.setBackgroundColor(Color.CYAN);
 
             num2.setEnabled(true);

@@ -36,4 +36,17 @@ public class Operations {
 
         return equation;
     }
+
+    public String getEquationPrettyFormat(Boolean isPreview){
+        String equation = "";
+        for(OperationAdapter operatorAdapter : operations){
+            equation += operatorAdapter.getOperationPrettyFormat();
+        }
+
+        if(isPreview){
+            equation = equation.replace("null", "?");
+        }
+
+        return equation;
+    }
 }

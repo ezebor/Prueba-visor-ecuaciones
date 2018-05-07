@@ -60,6 +60,23 @@ public class MainActivity extends AppCompatActivity {
                 FormulaViewer.displayFormula(formulaViewer, operations, true);
             }
         });
+
+        div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View sumButton) {
+                sum.setEnabled(false);
+                div.setEnabled(false);
+
+                currentOperator = new DivOperationAdapter();
+                operations.add(currentOperator);
+
+                ((TextView) findViewById(R.id.operator_label_id)).setText(currentOperator.getOperator());
+
+                InputMethodManager imm = (InputMethodManager) getSystemService(num2.getContext().INPUT_METHOD_SERVICE);
+                currentOperator.enableEditTextForNextOperand(operations, imm, num1, num2);
+                FormulaViewer.displayFormula(formulaViewer, operations, true);
+            }
+        });
     }
 
     // Keyboard manager

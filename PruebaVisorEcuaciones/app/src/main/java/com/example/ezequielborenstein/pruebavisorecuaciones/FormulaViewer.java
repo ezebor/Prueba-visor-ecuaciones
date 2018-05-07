@@ -17,6 +17,6 @@ import io.github.kexanie.library.MathView;
 public class FormulaViewer {
 
     public static void displayFormula(MathView formulaViewer, Operations operations, Boolean isPreview){
-        formulaViewer.setText("\\(" + operations.getEquation(isPreview) + "\\)");
+        formulaViewer.setText("\\(" + operations.getEquationPrettyFormat(isPreview) + "\\)");
     }
 }
